@@ -1,0 +1,939 @@
+/* =========================================
+   KHADIJA AZOUGAY — PERSONAL PORTFOLIO
+   Color palette: Cream, Sky Blue & Burgundy
+========================================= */
+
+/* ---------- 1. VARIABLES ---------- */
+
+:root {
+  --cream: #fff9ec;
+  --cream-dark: #f5e8ce;
+
+  --blue: #b9d9eb;
+  --blue-dark: #8ebbd5;
+
+  --burgundy: #741e2b;
+  --burgundy-light: #943747;
+
+  --text: #30252a;
+  --muted: #796d69;
+
+  --white: #ffffff;
+
+  --shadow: 0 12px 35px rgba(65, 43, 43, 0.1);
+  --radius: 18px;
+}
+
+:root {
+  --stripe-blue: #b9d9eb;
+  --stripe-white: #ffffff;
+}
+
+.blue-stripes {
+  background: repeating-linear-gradient(
+    90deg,
+    #ffffff 0px,
+    #ffffff 18px,
+    #b9d9eb 18px,
+    #b9d9eb 36px
+  );
+}
+
+/* ---------- 2. RESET ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* ---------- 3. GENERAL ---------- */
+
+.section-shell {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--burgundy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--burgundy);
+}
+
+h3 {
+  font-size: 21px;
+  color: var(--burgundy);
+  margin-bottom: 22px;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* ---------- 4. HEADER ---------- */
+
+.site-header {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding: 24px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--burgundy);
+}
+
+.brand-mark {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.brand-caption {
+  font-size: 8px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.main-nav a {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--burgundy);
+  transition: 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--blue-dark);
+}
+
+/* ---------- 5. HERO ---------- */
+
+.hero {
+  min-height: 540px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 35px;
+  padding: 55px 0 75px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(38px, 5.5vw, 65px);
+  color: var(--burgundy);
+  margin-bottom: 22px;
+}
+
+.hero-copy h1 span {
+  color: var(--blue-dark);
+}
+
+.hero-name {
+  font-size: 19px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.hero-name strong {
+  color: var(--burgundy);
+}
+
+.role-line {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+
+.role-line b {
+  color: var(--burgundy);
+  padding: 0 5px;
+}
+
+.intro {
+  max-width: 480px;
+  font-size: 14px;
+  margin-bottom: 27px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px 21px;
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.button-red {
+  background: var(--burgundy);
+  color: var(--white);
+}
+
+.button-red:hover {
+  background: var(--burgundy-light);
+  transform: translateY(-3px);
+}
+
+.button-outline {
+  border-color: var(--burgundy);
+  color: var(--burgundy);
+}
+
+.button-outline:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+/* Hero image */
+
+.hero-visual {
+  position: relative;
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.photo-cutout img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.photo-note {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+
+  background: var(--blue);
+  color: var(--burgundy);
+
+  padding: 8px 17px;
+  border-radius: 30px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.decor {
+  position: absolute;
+  color: var(--burgundy);
+  z-index: 2;
+}
+
+.decor-flower {
+  top: 25px;
+  left: 15px;
+  font-size: 45px;
+}
+
+.decor-star {
+  right: 15px;
+  top: 90px;
+  font-size: 35px;
+}
+
+/* ---------- 6. ABOUT ---------- */
+
+.about {
+  background: var(--blue);
+  border-radius: var(--radius);
+
+  padding: 55px;
+  margin-top: 35px;
+  margin-bottom: 85px;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.framed-photo {
+  position: relative;
+  background: var(--cream);
+  padding: 12px;
+  border: 7px solid #e8d3ae;
+  outline: 2px solid var(--burgundy);
+  outline-offset: -13px;
+  box-shadow: var(--shadow);
+  transform: rotate(-2deg);
+}
+
+.frame-inner {
+  height: 310px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.frame-spark {
+  position: absolute;
+  right: -15px;
+  top: -20px;
+  color: var(--burgundy);
+  font-size: 35px;
+}
+
+.about-copy h2 {
+  margin-bottom: 20px;
+}
+
+.about-copy p {
+  color: #55494b;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.about-copy .closing-line {
+  font-weight: 700;
+  color: var(--burgundy);
+  font-family: "Playfair Display", serif;
+}
+
+/* ---------- 7. INFO GRID ---------- */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  padding-bottom: 85px;
+}
+
+.info-column {
+  padding: 20px 5px;
+  min-width: 0;
+}
+
+.info-column h3 {
+  margin-bottom: 25px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 23px;
+  border-left: 2px solid var(--blue-dark);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -6px;
+  top: 5px;
+
+  width: 10px;
+  height: 10px;
+
+  background: var(--burgundy);
+  border-radius: 50%;
+}
+
+.item-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin-bottom: 5px;
+}
+
+.timeline-item p:not(.item-title) {
+  font-size: 12px;
+}
+
+.clean-list {
+  list-style: none;
+  margin: 12px 0 25px;
+}
+
+.clean-list li {
+  font-size: 12px;
+  padding: 5px 0 5px 17px;
+  position: relative;
+  color: var(--muted);
+}
+
+.clean-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--burgundy);
+  font-size: 10px;
+}
+
+.learning-title {
+  margin-top: 20px;
+}
+
+.language-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  padding: 11px 0;
+  border-bottom: 1px solid #e7d9c6;
+
+  font-size: 12px;
+}
+
+.language-row b {
+  color: var(--burgundy);
+  font-size: 11px;
+}
+
+.small-note {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.soft-skills-title {
+  margin-top: 25px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag-list span {
+  background: var(--blue);
+  color: var(--burgundy);
+
+  border-radius: 20px;
+  padding: 5px 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ---------- 8. INTERESTS ---------- */
+.interests {
+  background: repeating-linear-gradient(
+    90deg,
+    #ffffff 0px,
+    #ffffff 18px,
+    #b9d9eb 18px,
+    #b9d9eb 36px
+  );
+}
+
+.interests {
+  border-radius: var(--radius);
+
+  padding: 55px 35px;
+  margin-bottom: 85px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  margin-bottom: 12px;
+}
+
+.interest-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.interest-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.interest-card {
+  position: relative;
+  display: block;
+  background: var(--burgundy);
+  color: var(--white);
+
+  padding: 22px 15px 14px;
+  margin-top: 10px;
+  border-radius: 5px 10px 10px 10px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+/* Folder tab */
+.interest-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 38%;
+  height: 12px;
+  background: var(--burgundy);
+  border-radius: 6px 6px 0 0;
+}
+
+.interest-card:hover {
+  transform: translateY(-5px);
+  background: var(--burgundy-light);
+}
+
+.interest-card:hover::before {
+  background: var(--burgundy-light);
+}
+
+.interest-card:hover {
+  transform: translateY(-5px) rotate(-2deg);
+  background: var(--burgundy-light);
+}
+
+.full-photo {
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* ---------- 9. HIGHLIGHTS ---------- */
+
+.highlights {
+  padding-bottom: 90px;
+}
+
+.section-description {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.highlight-card {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--cream-dark);
+  border-radius: var(--radius);
+
+  padding: 30px 24px;
+  min-height: 190px;
+
+  border-bottom: 5px solid var(--burgundy);
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.card-number {
+  display: inline-block;
+  color: var(--blue-dark);
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.highlight-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.highlight-card p {
+  font-size: 12px;
+}
+
+/* ---------- 10. CONTACT ---------- */
+
+.contact {
+  background: repeating-linear-gradient(
+    90deg,
+    #ffffff 0px,
+    #ffffff 18px,
+    #b9d9eb 18px,
+    #b9d9eb 36px
+  );
+  .contact-copy h2 {
+    margin-bottom: 18px;
+  }
+
+  .contact-copy > p:not(.eyebrow) {
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #55494b;
+  }
+
+  .contact-email,
+  .linkedin-link {
+    display: block;
+    width: fit-content;
+    color: var(--burgundy);
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-email:hover,
+  .linkedin-link:hover {
+    text-decoration: underline;
+  }
+  /* Contact form */
+
+  .contact-form {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-form label {
+    color: var(--burgundy);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    border: 1px solid #e6d8c4;
+    border-radius: 9px;
+
+    padding: 12px;
+    background: var(--white);
+    color: var(--text);
+
+    font-size: 12px;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--burgundy);
+    box-shadow: 0 0 0 3px rgba(116, 30, 43, 0.08);
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .contact-form button {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+}
+
+/* ---------- 11. FOOTER ---------- */
+
+.site-footer {
+  width: min(1100px, 90%);
+  margin: auto;
+
+  padding: 25px 0 35px;
+  border-top: 1px solid #e7d9c6;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-signature {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--burgundy);
+}
+
+.site-footer p,
+.site-footer > a:last-child {
+  font-size: 11px;
+}
+
+.site-footer > a:last-child {
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+/* ---------- 12. RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 850px) {
+  .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+
+  .hero {
+    gap: 15px;
+  }
+
+  .about {
+    padding: 35px;
+    gap: 30px;
+  }
+
+  .info-grid {
+    gap: 18px;
+  }
+
+  .contact {
+    padding: 35px;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px 18px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 35px;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .hero-visual {
+    order: 2;
+    min-height: 340px;
+  }
+
+  .hero-photo {
+    height: 340px;
+  }
+
+  .intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    padding: 30px 22px;
+    gap: 30px;
+  }
+
+  .framed-photo {
+    width: min(270px, 85%);
+    margin: auto;
+  }
+
+  .frame-inner {
+    height: 260px;
+  }
+
+  .about-copy {
+    text-align: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .info-column {
+    padding: 20px;
+    border-bottom: 1px solid #e7d9c6;
+  }
+
+  .interests {
+    padding: 40px 20px;
+  }
+
+  .interest-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .full-photo {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    height: 300px;
+  }
+
+  .interest-tags {
+    gap: 15px;
+  }
+
+  .interest-card {
+    font-size: 11px;
+    padding: 12px 8px;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .contact-copy {
+    text-align: center;
+  }
+
+  .contact-email,
+  .linkedin-link {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .main-nav {
+    gap: 10px;
+  }
+
+  .main-nav a {
+    font-size: 9px;
+  }
+
+  .hero-copy h1 {
+    font-size: 36px;
+  }
+
+  .interest-layout {
+    gap: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
